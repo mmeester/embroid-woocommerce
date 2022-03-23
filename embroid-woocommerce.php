@@ -23,7 +23,18 @@ function wcem_order_status_processing( $order_id ){
       foreach($meta_data as $meta) {
         $data = $meta->get_data();
         
-        $name_keys = array('Naam - Naam voor op de beanie', 'Naam op dekentje', 'Naam op cape', 'Naam - Naam', 'Naam - Naam voor op de vlaggen', 'Naam - Naam op koord', 'Naam - Naam op doekje (max. 8 letters)', 'Naam', 'Naam op lintje', 'Personalisatie? - Naam (&euro;7,50)');
+        $name_keys = array(
+          'Naam - Naam voor op de beanie', 
+          'Naam op dekentje', 'Naam op cape', 
+          'Naam - Naam', 
+          'Naam - Naam voor op de vlaggen', 
+          'Naam - Naam op koord', 
+          'Naam - Naam op doekje (max. 8 letters)', 
+          'Naam', 
+          'Naam op lintje', 
+          'Personalisatie? - Naam (&euro;7,50)',
+          'Tekst op beanie'
+        );
         
         if (in_array($data['key'], $name_keys)) {
           $curl = curl_init();
