@@ -57,7 +57,12 @@ function wcem_create_embroid($item, $order_id)
   foreach ($meta_data as $meta) {
     $data = $meta->get_data();
 
-    if ((strstr(strtolower($data['key']), 'naam') || strstr(strtolower($data['key']), 'tekst')) && !strstr(strtolower($data['key']), 'locatie')) {
+    if (
+      (strstr(strtolower($data['key']), 'naam') ||
+        strstr(strtolower($data['key']), 'tekst') ||
+        strstr(strtolower($data['key']), 'opschrift')
+      ) && !strstr(strtolower($data['key']), 'locatie')
+    ) {
       $name = $data['value'];
     }
 
