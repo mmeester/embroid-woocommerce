@@ -4,7 +4,7 @@
  * Plugin Name:   Embroid.dev for Woocommerce
  * Plugin URI:    https://embroid.dev
  * Description:   Automate creation of your embroidery files
- * Version:       0.1.0
+ * Version:       0.1.1
  * Author:        e-mmer Interactive
  * Author URI:    https://e-mmer.nl
  */
