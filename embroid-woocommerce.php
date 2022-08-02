@@ -4,7 +4,7 @@
  * Plugin Name:   Embroid.dev for Woocommerce
  * Plugin URI:    https://embroid.dev
  * Description:   Automate creation of your embroidery files
- * Version:       0.1.1
+ * Version:       0.1.2
  * Author:        e-mmer Interactive
  * Author URI:    https://e-mmer.nl
  */
@@ -106,10 +106,13 @@ function wcem_create_embroid($item, $order_id)
       $item->update_meta_data(__('Embroid PES file', 'embroid-woocommmerce'), $response->pes);
       $item->update_meta_data(__('Embroid DST file', 'embroid-woocommmerce'), $response->dst);
       $item->save();
+    } else {
+      file_put_contents(dirname(__FILE__) . '/logs/embroid.log', '[' . date("F j, Y, g:i a") . '][ERROR]: Embroid not created, files are missing' . PHP_EOL, FILE_APPEND);
     }
 
-
     file_put_contents(dirname(__FILE__) . '/logs/embroid.log', '[' . date("F j, Y, g:i a") . '][NOTICE]: Embroid for ' . $data['value'] . ' created. ' . PHP_EOL, FILE_APPEND);
+  } else {
+    file_put_contents(dirname(__FILE__) . '/logs/embroid.log', '[' . date("F j, Y, g:i a") . '][ERROR]: Embroid not created, missing name' . PHP_EOL, FILE_APPEND);
   }
 }
 
