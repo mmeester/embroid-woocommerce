@@ -47,7 +47,11 @@ function wcem_order_status_processing($order_id)
 
 function wcem_create_embroid($item, $order_id)
 {
-  file_put_contents(dirname(__FILE__) . '/logs/embroid.log', '[' . date("F j, Y, g:i a") . '][Start]: Create embroid' . PHP_EOL, FILE_APPEND);
+  file_put_contents(
+    dirname(__FILE__) . '/logs/embroid.log',
+    '[' . date("F j, Y, g:i a") . '][Start]: Create embroid for order:' . $order_id . PHP_EOL,
+    FILE_APPEND
+  );
   // <array> WC_Meta_Data
   $meta_data = $item->get_meta_data();
 
