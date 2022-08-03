@@ -4,7 +4,7 @@
  * Plugin Name:   Embroid.dev for Woocommerce
  * Plugin URI:    https://embroid.dev
  * Description:   Automate creation of your embroidery files
- * Version:       0.1.2
+ * Version:       0.2.0
  * Author:        e-mmer Interactive
  * Author URI:    https://e-mmer.nl
  */
@@ -72,6 +72,10 @@ function wcem_create_embroid($item, $order_id)
 
     if (strstr(strtolower($data['key']), 'lettertype') && strtolower($data['value']) === 'modern') {
       $font = 'modern';
+    } elseif (strstr(strtolower($data['key']), 'lettertype') && strtolower($data['value']) === 'romantisch satin') {
+      $font = 'romantic_satin';
+    } elseif (strstr(strtolower($data['key']), 'lettertype') && strtolower($data['value']) === 'handgeschreven satin') {
+      $font = 'handwriting_satin';
     }
   }
 
