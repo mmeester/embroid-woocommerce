@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "embroid/embroid-woocommerce",
+=======
+    "name": "embroid/embroid-woocommerce-plugin",
+>>>>>>> 624e6159eac8e50d6d49ae227ea5bff630ffee4f
     "description": "Get automated embroid files from embroid.dev based on woocommerce addons",
     "type": "wordpress-plugin",
     "license": "MIT",
