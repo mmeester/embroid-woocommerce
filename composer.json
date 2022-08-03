@@ -3,6 +3,7 @@
     "description": "Get automated embroid files from embroid.dev based on woocommerce addons",
     "type": "wordpress-plugin",
     "license": "MIT",
+    "version": "0.1.2",
     "authors": [
         {
             "name": "Maurits Meester",
