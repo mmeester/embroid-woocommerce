@@ -1,5 +1,5 @@
 {
-    "name": "embroid/woocommerce-plugin",
+    "name": "embroid/embroid-woocommerce-plugin",
     "description": "Get automated embroid files from embroid.dev based on woocommerce addons",
     "type": "wordpress-plugin",
     "license": "MIT",
