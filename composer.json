@@ -1,0 +1,13 @@
+{
+    "name": "embroid/woocommerce-plugin",
+    "description": "Get automated embroid files from embroid.dev based on woocommerce addons",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maurits Meester",
+            "email": "maurits@e-mmer.nl"
+        }
+    ],
+    "require": {}
+}
